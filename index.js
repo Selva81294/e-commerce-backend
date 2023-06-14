@@ -21,6 +21,9 @@ const io = new Server(server, {
 app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+app.get("/", async(req,res)=>{
+    res.status(200).send("<h1>Welcome to EazyShop website API</h1>")
+})
 app.use("/users",userRouter)
 app.use("/products", productRouter)
 app.use("/images", imageRouter)
