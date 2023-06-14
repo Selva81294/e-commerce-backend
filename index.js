@@ -13,7 +13,7 @@ require('dotenv').config()
 const app = express()
 const server = http.createServer(app)
 const io = new Server(server, {
-    cors: "http://localhost:3000",
+    cors: "https://starlit-boba-48ae2d.netlify.app",
     methods: ['GET', 'POST', 'PATCH', 'DELETE']
 })
 
